@@ -5,28 +5,33 @@
     box-sizing: border-box;
 }
 
+/* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f9;
     color: #333;
+    line-height: 1.6;
 }
 
 /* Header Section */
 header {
     text-align: center;
     padding: 50px 20px;
-    background-color: #007bff;
+    background: linear-gradient(135deg, #007bff, #00c6ff);
     color: white;
+    border-bottom: 5px solid #ff5733;
 }
 
 header h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 10px;
+    letter-spacing: 2px;
 }
 
 header p {
     font-size: 1.5rem;
     margin-bottom: 10px;
+    opacity: 0.8;
 }
 
 header h2 {
@@ -36,23 +41,25 @@ header h2 {
 
 header .download-btn {
     background-color: #ff5733;
-    padding: 10px 20px;
+    padding: 12px 24px;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 30px;
     font-size: 1.2rem;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 header .download-btn:hover {
     background-color: #c63d29;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Navigation */
 nav {
     background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
 }
 
@@ -63,20 +70,24 @@ nav h1 {
 
 nav ul {
     list-style: none;
+    padding-left: 0;
 }
 
 nav ul button {
     background: none;
-    border: 1px solid #fff;
-    padding: 10px 20px;
-    margin: 5px;
+    border: 2px solid #fff;
+    padding: 12px 24px;
+    margin: 8px;
     color: white;
-    font-size: 1rem;
+    font-size: 1.1rem;
     cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 nav ul button:hover {
-    background-color: #555;
+    background-color: #007bff;
+    transform: translateY(-3px);
 }
 
 nav ul button a {
@@ -103,10 +114,12 @@ table {
     width: 100%;
     border-collapse: collapse;
     text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
 }
 
 th, td {
-    padding: 12px 15px;
+    padding: 15px;
     border: 1px solid #ddd;
 }
 
@@ -125,18 +138,34 @@ td {
 }
 
 .Skills h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
+    text-align: center;
+    color: #333;
 }
 
 .Skills ul {
     list-style: none;
     padding-left: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .Skills li {
+    background-color: #ff5733;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 25px;
     font-size: 1.2rem;
-    margin-bottom: 10px;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.Skills li:hover {
+    transform: translateY(-5px);
+    background-color: #c63d29;
 }
 
 .Skills h4 {
@@ -157,12 +186,13 @@ td {
 }
 
 img {
-    max-width: 100%;
+    max-width: 80px;
     height: auto;
+    transition: transform 0.3s;
 }
 
-h2, h4, h5 {
-    margin-top: 20px;
+img:hover {
+    transform: scale(1.1);
 }
 
 /* Contact Section */
@@ -177,8 +207,18 @@ h2, h4, h5 {
 }
 
 .contact-id li {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-id li:hover {
+    transform: translateX(5px);
+}
+
+.contact-id h2 {
+    font-size: 2rem;
+    color: #007bff;
 }
 
 /* Note Section */
@@ -187,7 +227,7 @@ h2, h4, h5 {
     text-align: center;
     background-color: #ff5733;
     color: white;
-    padding: 10px;
+    padding: 12px;
 }
 
 marquee {
@@ -222,7 +262,13 @@ marquee {
     }
 
     .Skills ul {
+        flex-direction: column;
+    }
+
+    .Skills li {
         font-size: 1rem;
+        padding: 8px 15px;
+        margin: 5px;
     }
 
     .contact-id ul li {
