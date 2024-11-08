@@ -312,3 +312,6 @@ marquee {
         padding: 8px 15px;
     }
 }
+html {
+    scroll-behavior: smooth;
+}
