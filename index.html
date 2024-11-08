@@ -97,4 +97,24 @@
     </div>
 </main>
 </body>
+<script>
+    // Select all navigation buttons
+    const navButtons = document.querySelectorAll('nav button a');
+
+    // Add event listeners to buttons
+    navButtons.forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default behavior of anchor links
+            
+            const targetId = button.getAttribute('href').substring(1); // Get the target section id
+            const targetSection = document.getElementById(targetId);
+            
+            // Scroll to the target section
+            window.scrollTo({
+                top: targetSection.offsetTop - 20, // Optional offset (adjust as needed)
+                behavior: 'smooth' // Smooth scrolling
+            });
+        });
+    });
+</script>
 </html>
