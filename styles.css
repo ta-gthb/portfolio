@@ -135,5 +135,75 @@ tr:hover {
     background-color: #e2e2e2;
 }
 
+/* Skills section */
 #Skills {
-    background-color: rgb(195, 198
+    background-color: rgb(195, 198, 196);
+    padding: 5px 0;
+    text-align: center;
+    margin-top: 1%;
+    border-top: groove black;
+}
+
+.Skills h2 {
+    text-decoration: underline;
+    font-size: 24px;
+}
+
+.Skills ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.Skills ul li {
+    text-align: left;
+    font-size: large;
+    font-style: italic;
+    margin: 10px 20px;
+}
+
+/* Contact section */
+#contact {
+    padding: 30px 0;
+    border: solid #ff004f;
+    margin: 20px auto;
+    text-align: center;
+    width: 70%;
+    max-width: 600px; /* Restricting width for better mobile appearance */
+}
+
+.contact-id h2 {
+    text-decoration: underline;
+}
+
+.contact-id ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-id ul li {
+    font-size: 17px;
+    text-align: left;
+    margin: 10px 20px;
+}
+
+/* Responsive adjustments for mobile screens */
+@media screen and (max-width: 600px) {
+    /* Skills section adjustments for mobile */
+    .Skills ul li {
+        font-size: medium;
+        margin-left: 10%; /* Reduce indentation on smaller screens */
+        text-align: left;
+    }
+
+    /* Contact section adjustments for mobile */
+    #contact {
+        width: 90%; /* Full-width on small screens */
+        padding: 15px 10px;
+    }
+
+    .contact-id ul li {
+        font-size: 16px;
+        margin-left: 5%; /* Slightly less margin for better readability */
+    }
+}
