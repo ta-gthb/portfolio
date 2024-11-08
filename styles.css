@@ -12,7 +12,7 @@ header {
     background-color: rgb(17, 124, 143);
 }
 
-header p{
+header p {
     text-align: center;
     font-size: 18px;
     color: rgb(255, 255, 255);
@@ -25,7 +25,7 @@ header h1 {
     color: white;
 }
 
-header h2{
+header h2 {
     text-align: center;
     font-size: 25px;
     color: rgb(229, 255, 0);
@@ -38,28 +38,27 @@ nav {
     text-align: center;
 }
 
-nav ul{
-    margin: 1% 0 0 0;
-    border-top: 10px groove rgb(0, 0, 0);
+nav ul {
+    margin: 1% 0 0;
     padding: 0;
     list-style: none;
+    border-top: 10px groove black;
 }
 
-nav ul button{
+nav ul button {
     background-color: rgb(255, 255, 255);
     display: inline-block;
     margin: 15px 20px;
 }
 
-nav ul button a{
+nav ul button a {
     text-decoration: none;
     color: rgb(0, 0, 0);
-    font-style: normal;
     font-size: 16px;
     position: relative;
 }
 
-nav ul button a::after{
+nav ul button a::after {
     content: '';
     width: 0;
     height: 3px;
@@ -70,20 +69,17 @@ nav ul button a::after{
     transition: 0.4s;
 }
 
-nav ul button a:hover::after{
+nav ul button a:hover::after {
     width: 100%;
 }
 
-nav h1{
-    text-align: center;
+nav h1 {
     color: aliceblue;
     text-decoration: underline;
-    font-style: normal;
     margin: 1% 0 0 1%;
 }
 
-nav p{
-    text-align: center;
+nav p {
     font-size: 18px;
     font-style: italic;
     color: aliceblue;
@@ -93,13 +89,12 @@ main {
     text-align: center;
 }
 
-#Education{
-    margin: 0;
-    padding-bottom: 5%;
+#Education {
     background-color: bisque;
+    padding-bottom: 5%;
 }
 
-#Education h2{
+#Education h2 {
     text-decoration: underline;
     padding: 20px 5px;
 }
@@ -113,26 +108,23 @@ main {
 }
 
 table {
+    width: 100%;
     border-collapse: collapse;
     font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
     background-color: #f9f9f9;
+    border: solid black;
+}
+
+th, td {
+    padding: 12px;
     border: solid black;
 }
 
 th {
     background-color: aquamarine;
-    color: black;
-    padding: 12px;
-    text-align: center;
     font-weight: bold;
-    border: solid black;
-}
-
-td {
-    padding: 12px;
-    text-align: left;
-    border: solid black;
+    color: black;
+    text-align: center;
 }
 
 tr:nth-child(even) {
@@ -143,202 +135,5 @@ tr:hover {
     background-color: #e2e2e2;
 }
 
-#Skills{
-    background-color: rgb(195, 198, 196);
-    padding: 5px 0;
-    text-align: center;
-    margin-top: 1%;
-    border-top: 10px groove black;
-}
-
-.Skills h2{
-    text-decoration: underline;
-}
-
-.Skills ul li{
-    margin-left: 37%;
-    list-style-position: inside;
-    text-align: justify;
-    font-size: large;
-    font-style: italic;
-}
-
-.Skills ul li h4{
-    display: inline-block;
-}
-
-#other{
-    background-color: brown;
-    padding: 50px 0;
-    margin: 1% 10% 2%;
-    border: solid black;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-}
-
-.other-profiles, .social-media-profiles {
-    background-color: aliceblue;
-    overflow: hidden;
-    text-align: center;
-    margin: 0 2%;
-    border: groove aqua;
-}
-
-.other-profiles h2, .social-media-profiles h2{
-    font-size: 24px;
-    text-decoration: underline;
-}
-
-#contact{
-    padding: 30px 0;
-    border: solid #ff004f;
-    margin: 0 30% 1%;
-    text-align: center;
-}
-
-.contact-id h2{
-    text-decoration: underline;
-}
-
-.contact-id ul li{
-    margin-left: 29%;
-    text-align: justify;
-    font-size: 17px;
-}
-
-.contact-id ul li h4{
-    list-style-position: inside;
-    display: inline;
-}
-
-#note{
-    margin: 7% 0 10%;
-    padding: 5px 0;
-    border: groove #ff004f;
-    background-color: rgba(233, 254, 49, 0.784);
-}
-
-#note marquee h5{
-    font-size: 17px;
-    color: black;
-}
-
-#note marquee h4{
-    font-size: 18px;
-    text-decoration: underline;
-    color: red;
-}
-
-.download-btn {
-    display: inline-block;
-    padding: 8px 20px;
-    font-size: 14px;
-    font-family: Arial, sans-serif;
-    font-weight: 500;
-    color: #fff;
-    background-color: #000;
-    border: none;
-    border-radius: 25px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-}
-
-.download-btn::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 250%;
-    height: 250%;
-    background-color: rgba(113, 113, 113, 0.1);
-    transition: all 0.4s ease;
-    border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0);
-}
-
-.download-btn:hover::before {
-    transform: translate(-50%, -50%) scale(1);
-}
-
-.download-btn:hover {
-    background-color: #272727;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
-    transform: translateY(-1px);
-}
-
-/* Responsive Styling */
-@media screen and (max-width: 768px) {
-    header, nav, #Education, #Skills, #other, #contact, #note {
-        padding: 10px;
-    }
-
-    header h1 {
-        font-size: 28px;
-    }
-
-    header h2, nav h1 {
-        font-size: 20px;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    #other {
-        flex-direction: column;
-    }
-
-    .other-profiles, .social-media-profiles, #contact {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .Skills ul li {
-        margin-left: 0;
-        font-size: medium;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    header h1 {
-        font-size: 24px;
-    }
-
-    header h2, nav h1 {
-        font-size: 18px;
-    }
-
-    #contact {
-        margin: 0 auto;
-        width: 90%;
-    }
-
-    .Skills ul li {
-        font-size: small;
-    }
-
-    /* Table adjustments */
-    table, thead, tbody, th, td, tr {
-        display: block;
-    }
-
-    th {
-        display: none;
-    }
-
-    td {
-        position: relative;
-        padding-left: 50%;
-    }
-
-    td:before {
-        content: attr(data-label);
-        position: absolute;
-        left: 10px;
-        font-weight: bold;
-    }
-}
+#Skills {
+    background-color: rgb(195, 198
