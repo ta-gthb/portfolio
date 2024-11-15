@@ -1,317 +1,352 @@
-/* General Reset */
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-/* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    line-height: 1.6;
+    margin: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* Header Section */
 header {
+    padding: 40px;
+    background-color: rgb(17, 124, 143);
+}
+
+header p{
     text-align: center;
-    padding: 50px 20px;
-    background: linear-gradient(135deg, #007bff, #00c6ff);
-    color: white;
-    border-bottom: 5px solid #ff5733;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-style: normal;
 }
 
 header h1 {
-    font-size: 3.5rem;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-}
-
-header p {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    opacity: 0.8;
-}
-
-header h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-header .download-btn {
-    background-color: #ff5733;
-    padding: 12px 24px;
+    text-align: center;
+    font-size: 40px;
     color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-size: 1.2rem;
-    transition: all 0.3s ease-in-out;
 }
 
-header .download-btn:hover {
-    background-color: #c63d29;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+header h2{
+    text-align: center;
+    font-size: 25px;
+    color: rgb(229, 255, 0);
 }
 
-/* Navigation */
 nav {
     background-color: #333;
-    color: white;
-    padding: 15px;
-    text-align: center;
+    overflow: hidden;
+    padding: 10px;
 }
 
-nav h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+nav ul{
+    margin-right: 0%;
+    margin-left: 0%;
+    margin-bottom: 0%;
+    margin-top: 1%;
+    border-top-width: 10px;
+    border-top-style: groove;
+    border-top-color: rgb(0, 0, 0);
 }
 
-nav ul {
+nav ul button{
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
     list-style: none;
-    padding-left: 0;
+    margin: 15px 20px;
 }
 
-nav ul button {
-    background: none;
-    border: 2px solid #fff;
-    padding: 12px 24px;
-    margin: 8px;
-    color: white;
-    font-size: 1.1rem;
-    cursor: pointer;
-    border-radius: 25px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-nav ul button:hover {
-    background-color: #007bff;
-    transform: translateY(-3px);
-}
-
-nav ul button a {
+nav ul button a{
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
+    font-style: normal;
+    font-size: 16px;
+    position: relative;
 }
 
-nav ul button:focus {
-    outline: none;
+nav ul button a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.4s;
 }
 
-/* Main Section */
-main {
-    padding: 50px 20px;
-}
-
-/* Education Section */
-.table-container {
-    overflow-x: auto;
-    margin-top: 20px;
-}
-
-table {
+nav ul button a:hover::after{
     width: 100%;
+}
+
+nav h1{
+    text-align: center;
+    display: block;
+    padding: 5px 0;
+    color: aliceblue;
+    text-decoration: underline;
+    font-style: normal;
+    margin-left: 1%;
+    margin-bottom: 0%;
+}
+
+nav p{
+    text-align: center;
+    margin-bottom: 0%;
+    display: inline block;
+    font-size: 18px;
+    font-style: italic ;
+    color: aliceblue;
+}   
+
+main {
+    text-align: center;
+}
+
+#Education{
+  margin-top: 0%;
+  padding-bottom: 5%;
+  background-color: bisque;
+  margin-bottom: 0%;
+}
+
+#Education h2{
+    text-decoration: underline;
+    padding: 20px 5px;
+}
+
+/* Table container for centering and responsive layout */
+.table-container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow-x: auto;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Basic table styling */
+  table {
     border-collapse: collapse;
-    text-align: left;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
-}
-
-th, td {
-    padding: 15px;
-    border: 1px solid #ddd;
-}
-
-th {
-    background-color: #007bff;
-    color: white;
-}
-
-td {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
     background-color: #f9f9f9;
-}
+    border-color: black;
+    border-style: solid;
+  }
 
-/* Skills Section */
-.Skills {
-    margin-top: 40px;
-}
-
-.Skills h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #333;
-}
-
-.Skills ul {
-    list-style: none;
-    padding-left: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.Skills li {
-    background-color: #ff5733;
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 25px;
-    font-size: 1.2rem;
-    color: white;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.Skills li:hover {
-    transform: translateY(-5px);
-    background-color: #c63d29;
-}
-
-.Skills h4 {
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-/* Other Profiles Section */
-.other-profiles,
-.social-media-profiles {
-    margin-top: 40px;
-    text-align: center;
-}
-
-.other-profiles a,
-.social-media-profiles a {
-    margin: 0 15px;
-}
-
-img {
-    max-width: 80px;
-    height: auto;
-    transition: transform 0.3s;
-}
-
-img:hover {
-    transform: scale(1.1);
-}
-
-/* Contact Section */
-.contact-id {
-    margin-top: 40px;
-    text-align: center;
-}
-
-.contact-id ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.contact-id li {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.contact-id li:hover {
-    transform: translateX(5px);
-}
-
-.contact-id h2 {
-    font-size: 2rem;
-    color: #007bff;
-}
-
-/* Note Section */
-#note {
-    margin-top: 40px;
-    text-align: center;
-    background-color: #ff5733;
-    color: white;
+  /* Header row styling */
+  th {
+    background-color: aquamarine;
+    color: rgb(0, 0, 0);
     padding: 12px;
-}
+    text-align: center;
+    font-weight: bold;
+    border-color: black;
+    border-style: solid;
+  }
 
-marquee {
-    font-size: 1.5rem;
-}
+  /* Table body rows styling */
+  td {
+    padding: 12px;
+    text-align: left;
+    border-color: black;
+    border-style: solid;
+  }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.5rem;
+  /* Alternating row colors */
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  /* Hover effect on rows */
+  tr:hover {
+    background-color: #e2e2e2;
+  }
+
+  /* Styling for responsive layout */
+  @media screen and (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
     }
 
-    header p {
-        font-size: 1.2rem;
+    /* Table header styling for smaller screens */
+    th {
+      display: none;
     }
 
-    header h2 {
-        font-size: 1.5rem;
+    td {
+      position: relative;
+      padding-left: 50%;
+      white-space: nowrap;
     }
 
-    nav h1 {
-        font-size: 1.5rem;
+    /* Label each cell in small screens */
+    td:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      font-weight: bold;
     }
+  } 
 
-    nav ul button {
-        padding: 8px 15px;
-        font-size: 1rem;
-    }
+  #Skills{
+    background-color: rgb(195, 198, 196);
+    padding: 5px 0;
+    text-align: center;
+    margin-top: 1%;
+    border-collapse: collapse;
+    border-color: black;
+    border-top-style: groove;
+  }
 
-    table th, table td {
-        padding: 8px 10px;
-    }
+  .Skills h2{
+    text-decoration: underline;
+  }
 
-    .Skills ul {
-        flex-direction: column;
-    }
+  .Skills ul li{
+    margin-left: 37%;
+    list-style-position: inside;
+    text-align: justify;
+    font-size: large;
+    font-style: italic;
+  }
 
-    .Skills li {
-        font-size: 1rem;
-        padding: 8px 15px;
-        margin: 5px;
-    }
+  .Skills ul li h4{
+    margin-top: 0px;
+    display: inline-block;
+  }
 
-    .contact-id ul li {
-        font-size: 1rem;
-    }
+  #other{
+    background-color: brown;
+    padding: 50px 0px;
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2%;
+    border-style: solid;
+    border-color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .other-profiles{
+    background-color: aliceblue;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 0%;
+    margin-inline: 2%;
+    border-style: groove;
+    border-color: aqua;
+  }
+
+  .other-profiles h2{
+    font-size: 24px;
+    text-decoration: underline;
+  }
+
+  .social-media-profiles{
+    background-color: aliceblue;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 0%;
+    inline-size: 100%;
+    margin-right: 2%;
+    border-style: groove;
+    border-color: aqua;
+  }
+
+ .social-media-profiles h2{
+    font-size: 24px;
+    text-decoration: underline;
+ }
+
+ #contact{
+    padding: 30px 0;
+    border-color: #ff004f;
+    border-style: solid;
+    margin-top: 0px;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 1%;
+    text-align: center;
+ }
+
+ .contact-id h2{
+    text-decoration: underline;
+ }
+
+ .contact-id ul li{
+  margin-left: 29%;
+  text-align: justify;
+  font-size: 17px;
+ }
+
+ .contact-id ul li h4{
+  list-style-position: inside;
+  display: inline;
+  margin-left: 0;
+ }
+
+ #note{
+  margin-top: 7%;
+  margin-bottom: 10%;
+  margin-left: 0%;
+  margin-right: 0%;
+  padding: 5px 0;
+  border-color: #ff004f;
+  border-style: groove;
+  background-color: rgba(233, 254, 49, 0.784);
+ }
+
+ #note marquee h5{
+  font-size: 17px;
+  color: black;
+  display: inline;
+ }
+
+ #note marquee h4{
+  font-size: 18px;
+  text-decoration: underline;
+  color: red;
+  display: inline;
+ }
 
     .download-btn {
-        font-size: 1rem;
-        padding: 8px 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
-    header h2 {
-        font-size: 1.2rem;
+        display: inline-block;
+        padding: 8px 20px;
+        font-size: 14px;
+        font-family: Arial, sans-serif;
+        font-weight: 500;
+        color: #fff;
+        background-color: #000000; /* Dark gray */
+        border: none;
+        border-radius: 25px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        position: relative;
+        overflow: hidden;
     }
 
-    nav ul button {
-        padding: 6px 12px;
-        font-size: 0.9rem;
+    .download-btn::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 250%;
+        height: 250%;
+        background-color: rgba(113, 113, 113, 0.1);
+        transition: all 0.4s ease;
+        border-radius: 50%;
+        transform: translate(-50%, -50%) scale(0);
     }
 
-    .Skills li {
-        font-size: 1rem;
+    .download-btn:hover::before {
+        transform: translate(-50%, -50%) scale(1);
     }
 
-    .contact-id ul li {
-        font-size: 1rem;
+    .download-btn:hover {
+        background-color: #272727; /* Lighter gray on hover */
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+        transform: translateY(-1px);
     }
-
-    .download-btn {
-        font-size: 1rem;
-        padding: 8px 15px;
-    }
-}
-html {
-    scroll-behavior: smooth;
-}
