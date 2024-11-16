@@ -3,30 +3,28 @@
 }
 
 body {
-    margin: 0px;
+    margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 header {
     padding: 40px;
     background-color: rgb(17, 124, 143);
+    text-align: center;
 }
 
-header p{
-    text-align: center;
+header p {
     font-size: 18px;
     color: rgb(255, 255, 255);
     font-style: normal;
 }
 
 header h1 {
-    text-align: center;
     font-size: 40px;
     color: white;
 }
 
-header h2{
-    text-align: center;
+header h2 {
     font-size: 25px;
     color: rgb(229, 255, 0);
 }
@@ -35,34 +33,31 @@ nav {
     background-color: #333;
     overflow: hidden;
     padding: 10px;
+    text-align: center;
 }
 
-nav ul{
-    margin-right: 0%;
-    margin-left: 0%;
-    margin-bottom: 0%;
-    margin-top: 1%;
-    border-top-width: 10px;
-    border-top-style: groove;
-    border-top-color: rgb(0, 0, 0);
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-nav ul button{
+nav ul button {
     background-color: rgb(255, 255, 255);
     display: inline-block;
-    list-style: none;
     margin: 15px 20px;
+    border: none;
+    padding: 10px 20px;
 }
 
-nav ul button a{
+nav ul button a {
     text-decoration: none;
     color: rgb(0, 0, 0);
-    font-style: normal;
     font-size: 16px;
     position: relative;
 }
 
-nav ul button a::after{
+nav ul button a::after {
     content: '';
     width: 0;
     height: 3px;
@@ -70,283 +65,212 @@ nav ul button a::after{
     position: absolute;
     left: 0;
     bottom: -6px;
-    transition: 0.4s;
+    transition: width 0.4s;
 }
 
-nav ul button a:hover::after{
+nav ul button a:hover::after {
     width: 100%;
 }
 
-nav h1{
-    text-align: center;
-    display: block;
+nav h1 {
     padding: 5px 0;
     color: aliceblue;
     text-decoration: underline;
-    font-style: normal;
-    margin-left: 1%;
-    margin-bottom: 0%;
 }
 
-nav p{
-    text-align: center;
-    margin-bottom: 0%;
-    display: inline block;
+nav p {
     font-size: 18px;
-    font-style: italic ;
+    font-style: italic;
     color: aliceblue;
-}   
+}
 
 main {
     text-align: center;
 }
 
-#Education{
-  margin-top: 0%;
-  padding-bottom: 5%;
-  background-color: bisque;
-  margin-bottom: 0%;
+#Education {
+    margin: 0;
+    padding-bottom: 5%;
+    background-color: bisque;
 }
 
-#Education h2{
+#Education h2 {
     text-decoration: underline;
     padding: 20px 5px;
 }
 
-/* Table container for centering and responsive layout */
 .table-container {
     width: 100%;
     max-width: 800px;
     margin: auto;
     overflow-x: auto;
-    border-radius: 0px;
+    border-radius: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+}
 
-  /* Basic table styling */
-  table {
-    border-collapse: collapse;
-    font-family: Arial, Helvetica, sans-serif;
+table {
     width: 100%;
+    border-collapse: collapse;
     background-color: #f9f9f9;
-    border-color: black;
-    border-style: solid;
-  }
+}
 
-  /* Header row styling */
-  th {
-    background-color: aquamarine;
-    color: rgb(0, 0, 0);
-    padding: 12px;
-    text-align: center;
-    font-weight: bold;
-    border-color: black;
-    border-style: solid;
-  }
-
-  /* Table body rows styling */
-  td {
+th, td {
+    border: 1px solid black;
     padding: 12px;
     text-align: left;
-    border-color: black;
-    border-style: solid;
-  }
+}
 
-  /* Alternating row colors */
-  tr:nth-child(even) {
+th {
+    background-color: aquamarine;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+tr:nth-child(even) {
     background-color: #f2f2f2;
-  }
+}
 
-  /* Hover effect on rows */
-  tr:hover {
+tr:hover {
     background-color: #e2e2e2;
-  }
+}
 
-  /* Styling for responsive layout */
-  @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     table, thead, tbody, th, td, tr {
-      display: block;
+        display: block;
     }
 
-    /* Table header styling for smaller screens */
     th {
-      display: none;
+        display: none;
     }
 
     td {
-      position: relative;
-      padding-left: 50%;
-      white-space: nowrap;
+        position: relative;
+        padding-left: 50%;
+        white-space: nowrap;
     }
 
-    /* Label each cell in small screens */
     td:before {
-      content: attr(data-label);
-      position: absolute;
-      left: 10px;
-      font-weight: bold;
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
     }
-  } 
+}
 
-  #Skills{
+#Skills {
     background-color: rgb(195, 198, 196);
     padding: 5px 0;
     text-align: center;
     margin-top: 1%;
-    border-collapse: collapse;
-    border-color: black;
-    border-top-style: groove;
-  }
+    border-top: 1px groove black;
+}
 
-  .Skills h2{
+#Skills h2 {
     text-decoration: underline;
-  }
+}
 
-  .Skills ul li{
-    margin-left: 37%;
-    list-style-position: inside;
+#Skills ul {
+    padding: 0;
+    list-style: none;
+}
+
+#Skills ul li {
+    margin: 0 auto;
+    display: block;
     text-align: justify;
     font-size: large;
     font-style: italic;
-  }
+}
 
-  .Skills ul li h4{
-    margin-top: 0px;
-    display: inline-block;
-  }
-
-  #other{
-    background-color: brown;
-    padding: 50px 0px;
-    margin-top: 1%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 2%;
-    border-style: solid;
-    border-color: black;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-
-  .other-profiles{
-    background-color: aliceblue;
-    overflow: hidden;
+#Skills overflow: hidden;
     text-align: center;
-    margin-top: 0%;
-    margin-inline: 2%;
-    border-style: groove;
-    border-color: aqua;
-  }
+    margin: 0 2%;
+    border: 1px groove aqua;
+    flex: 1;
+    min-width: 300px;
+}
 
-  .other-profiles h2{
+.other-profiles h2, .social-media-profiles h2 {
     font-size: 24px;
     text-decoration: underline;
-  }
+}
 
-  .social-media-profiles{
-    background-color: aliceblue;
-    overflow: hidden;
-    text-align: center;
-    margin-top: 0%;
-    inline-size: 100%;
-    margin-right: 2%;
-    border-style: groove;
-    border-color: aqua;
-  }
-
- .social-media-profiles h2{
-    font-size: 24px;
-    text-decoration: underline;
- }
-
- #contact{
+#contact {
     padding: 30px 0;
-    border-color: #ff004f;
-    border-style: solid;
-    margin-top: 0px;
-    margin-left: 30%;
-    margin-right: 30%;
-    margin-bottom: 1%;
+    border: 1px solid #ff004f;
+    margin: 0 30% 1%;
     text-align: center;
- }
+}
 
- .contact-id h2{
+.contact-id h2 {
     text-decoration: underline;
- }
+}
 
- .contact-id ul li{
-  margin-left: 29%;
-  text-align: justify;
-  font-size: 17px;
- }
+.contact-id ul {
+    padding: 0;
+    list-style: none;
+    text-align: justify;
+    font-size: 17px;
+}
 
- .contact-id ul li h4{
-  list-style-position: inside;
-  display: inline;
-  margin-left: 0;
- }
+.contact-id ul li h4 {
+    display: inline;
+}
 
- #note{
-  margin-top: 7%;
-  margin-bottom: 10%;
-  margin-left: 0%;
-  margin-right: 0%;
-  padding: 5px 0;
-  border-color: #ff004f;
-  border-style: groove;
-  background-color: rgba(233, 254, 49, 0.784);
- }
+#note {
+    margin: 7% 0 10%;
+    padding: 5px 0;
+    border: 1px groove #ff004f;
+    background-color: rgba(233, 254, 49, 0.784);
+}
 
- #note marquee h5{
-  font-size: 17px;
-  color: black;
-  display: inline;
- }
+#note marquee h5 {
+    font-size: 17px;
+    color: black;
+}
 
- #note marquee h4{
-  font-size: 18px;
-  text-decoration: underline;
-  color: red;
-  display: inline;
- }
+#note marquee h4 {
+    font-size: 18px;
+    text-decoration: underline;
+    color: red;
+}
 
-    .download-btn {
-        display: inline-block;
-        padding: 8px 20px;
-        font-size: 14px;
-        font-family: Arial, sans-serif;
-        font-weight: 500;
-        color: #fff;
-        background-color: #000000; /* Dark gray */
-        border: none;
-        border-radius: 25px;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-        position: relative;
-        overflow: hidden;
-    }
+.download-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+    color: #fff;
+    background-color: #000000; /* Dark gray */
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
 
-    .download-btn::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 250%;
-        height: 250%;
-        background-color: rgba(113, 113, 113, 0.1);
-        transition: all 0.4s ease;
-        border-radius: 50%;
-        transform: translate(-50%, -50%) scale(0);
-    }
+.download-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250%;
+    height: 250%;
+    background-color: rgba(113, 113, 113, 0.1);
+    transition: transform 0.4s;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+}
 
-    .download-btn:hover::before {
-        transform: translate(-50%, -50%) scale(1);
-    }
+.download-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
 
-    .download-btn:hover {
-        background-color: #272727; /* Lighter gray on hover */
-        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
-        transform: translateY(-1px);
-    }
+.download-btn:hover {
+    background-color: #272727; /* Lighter gray on hover */
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+}
