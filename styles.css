@@ -12,15 +12,22 @@ header {
     background-color: rgb(17, 124, 143);
 }
 
+header p {
+    text-align: center;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    font-style: normal;
+}
+
 header h1 {
     text-align: center;
-    font-size: 40px; /* Changed from 2rem */
+    font-size: 2rem;
     color: white;
 }
 
 header h2 {
     text-align: center;
-    font-size: 25px; /* Changed from 1.5rem */
+    font-size: 1.5rem;
     color: rgb(229, 255, 0);
 }
 
@@ -31,63 +38,28 @@ nav {
 }
 
 nav ul {
-    margin-right: 0%;
-    margin-left: 0%;
-    margin-bottom: 0%;
-    margin-top: 1%;
-    border-top-width: 10px;
-    border-top-style: groove;
-    border-top-color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    border-top: 10px groove rgb(0, 0, 0);
 }
 
 nav ul button {
     background-color: rgb(255, 255, 255);
-    display: inline-block;
-    list-style: none;
-    margin: 15px 20px;
+    margin: 10px;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 nav ul button a {
     text-decoration: none;
     color: rgb(0, 0, 0);
-    font-style: normal;
-    font-size: 16px;
-    position: relative;
-}
-
-nav ul button a::after {
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #ff004f;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.4s;
-}
-
-nav ul button a:hover::after {
-    width: 100%;
-}
-
-nav h1 {
-    text-align: center;
-    display: block;
-    padding: 5px 0;
-    color: aliceblue;
-    text-decoration: underline;
-    font-style: normal;
-    margin-left: 1%;
-    margin-bottom: 0%;
-}
-
-nav p {
-    text-align: center;
-    margin-bottom: 0%;
-    display: inline-block;
-    font-size: 18px;
-    font-style: italic;
-    color: aliceblue;
+    font-size: 1rem;
 }
 
 main {
@@ -281,7 +253,7 @@ tr:hover {
     transform: translate(-50%, -50%) scale(0);
 }
 
-download-btn:hover::before {
+.download-btn:hover::before {
     transform: translate(-50%, -50%) scale(1);
 }
 
