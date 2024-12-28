@@ -190,9 +190,69 @@ tr:hover {
     text-align: center;
 }
 
+/* Download Resume Button */
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #fff;
+    background-color: #000000; /* Dark gray */
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.download-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250%;
+    height: 250%;
+    background-color: rgba(113, 113, 113, 0.1);
+    transition: all 0.4s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.download-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.download-btn:hover {
+    background-color: #272727; /* Lighter gray on hover */
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+}
+
+/* About Section */
+#about {
+    background-color: rgb(255, 255, 204);
+    padding: 20px;
+    margin: 10px auto;
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: 1px solid rgb(255, 204, 0);
+    width: 90%;
+    border-radius: 5px;
+}
+
+#about h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
 /* Responsive Design for Smartphones */
 @media screen and (max-width: 1080px) {
-    header, nav, main, #Education, #Skills, #contact {
+    header, nav, main, #Education, #Skills, #contact, #about {
         padding: 2%;
     }
 
@@ -207,10 +267,6 @@ tr:hover {
     nav ul button {
         margin: 5px 0;
         padding: 10px;
-    }
-
-    .table-container {
-        overflow-x: auto;
     }
 
     #other {
