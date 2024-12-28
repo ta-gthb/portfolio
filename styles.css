@@ -3,7 +3,7 @@
 }
 
 body {
-    margin: 0px;
+    margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -38,57 +38,29 @@ nav {
 }
 
 nav ul {
-    margin: 1% 0 0 0;
+    margin: 0;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    list-style: none;
     border-top: 10px groove rgb(0, 0, 0);
 }
 
 nav ul button {
     background-color: rgb(255, 255, 255);
-    display: inline-block;
-    list-style: none;
     margin: 10px;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 nav ul button a {
     text-decoration: none;
     color: rgb(0, 0, 0);
-    font-size: 16px;
-    position: relative;
+    font-size: 1rem;
 }
-
-nav ul button a::after {
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #ff004f;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.4s;
-}
-
-nav ul button a:hover::after {
-    width: 100%;
-}
-
-nav h1 {
-    text-align: center;
-    padding: 5px 0;
-    color: aliceblue;
-    text-decoration: underline;
-    margin: 1% 0 0 1%;
-}
-
-nav p {
-    text-align: center;
-    font-size: 18px;
-    font-style: italic;
-    color: aliceblue;
-}   
 
 main {
     text-align: center;
@@ -96,7 +68,6 @@ main {
 }
 
 #Education {
-    margin: 0;
     padding: 5%;
     background-color: bisque;
 }
@@ -106,18 +77,15 @@ main {
     font-size: 1.5rem;
 }
 
-/* Responsive table container */
 .table-container {
     width: 100%;
     max-width: 800px;
     margin: auto;
     overflow-x: auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 table {
     border-collapse: collapse;
-    font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     background-color: #f9f9f9;
     border: 1px solid black;
@@ -128,6 +96,7 @@ th {
     color: rgb(0, 0, 0);
     padding: 12px;
     text-align: center;
+    font-weight: bold;
     border: 1px solid black;
 }
 
@@ -145,31 +114,10 @@ tr:hover {
     background-color: #e2e2e2;
 }
 
-@media screen and (max-width: 1080px) {
-    table, thead, tbody, th, td, tr {
-        display: block;
-    }
-
-    th {
-        display: none;
-    }
-
-    td {
-        position: relative;
-        padding-left: 50%;
-    }
-
-    td:before {
-        content: attr(data-label);
-        position: absolute;
-        left: 10px;
-        font-weight: bold;
-    }
-}
-
 #Skills {
     background-color: rgb(195, 198, 196);
     padding: 5%;
+    text-align: center;
 }
 
 .Skills h2 {
@@ -177,63 +125,99 @@ tr:hover {
     font-size: 1.5rem;
 }
 
-.Skills ul li {
-    margin-left: 5%;
+.Skills ul {
     list-style-position: inside;
-    font-size: 1rem;
-    font-style: italic;
+    margin: auto;
+    max-width: 600px;
+    padding: 0;
 }
 
-.Skills ul li h4 {
-    display: inline-block;
+.Skills ul li {
+    text-align: left;
+    font-size: 1rem;
+    margin: 10px 0;
 }
 
 #other {
     background-color: brown;
-    padding: 5%;
-    margin: 1% 10% 2%;
+    padding: 20px;
+    margin: 10px;
     border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
+    justify-content: center;
 }
 
 .other-profiles, .social-media-profiles {
     background-color: aliceblue;
     text-align: center;
-    margin: 0;
-    padding: 20px;
+    padding: 10px;
     border: 2px groove aqua;
-    flex: 1 1 calc(50% - 40px);
+    flex: 1 1 45%;
+    max-width: 100%;
 }
 
 .other-profiles h2, .social-media-profiles h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-decoration: underline;
 }
 
 #contact {
-    padding: 30px;
-    margin: 0 auto 1%;
+    padding: 20px;
+    margin: 10px auto;
     text-align: center;
     border: 1px solid #ff004f;
-    width: 80%;
+    width: 90%;
+}
+
+.contact-id ul {
+    padding: 0;
+    list-style: none;
 }
 
 .contact-id ul li {
-    margin: 10px 0;
     text-align: left;
     font-size: 1rem;
-}
-
-.contact-id ul li h4 {
-    display: inline;
+    margin: 10px 0;
 }
 
 #note {
-    margin: 7% 0 10%;
+    margin: 20px auto;
     padding: 20px;
     border: 2px groove #ff004f;
     background-color: rgba(233, 254, 49, 0.784);
     text-align: center;
+}
+
+/* Responsive Design for Smartphones */
+@media screen and (max-width: 1080px) {
+    header, nav, main, #Education, #Skills, #contact {
+        padding: 2%;
+    }
+
+    header h1, header h2 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul button {
+        margin: 5px 0;
+        padding: 10px;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+    #other {
+        flex-direction: column;
+    }
+
+    .other-profiles, .social-media-profiles {
+        flex: 1 1 100%;
+    }
 }
