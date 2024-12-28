@@ -77,22 +77,149 @@ main {
     font-size: 1.5rem;
 }
 
-#about {
-    background-color: rgb(255, 255, 204);
-    padding: 20px;
-    margin: 10px auto;
-    text-align: justify;
-    font-size: 1rem;
-    line-height: 1.5;
-    border: 1px solid rgb(255, 204, 0);
-    width: 90%;
-    border-radius: 5px;
+.table-container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow-x: auto;
 }
 
-#about h2 {
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #f9f9f9;
+    border: 1px solid black;
+}
+
+th {
+    background-color: aquamarine;
+    color: rgb(0, 0, 0);
+    padding: 12px;
     text-align: center;
-    font-size: 1.5rem;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid black;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e2e2e2;
+}
+
+#Skills {
+    background-color: rgb(195, 198, 196);
+    padding: 5%;
+    text-align: center;
+}
+
+.Skills h2 {
     text-decoration: underline;
+    font-size: 1.5rem;
+}
+
+.Skills ul {
+    list-style-position: inside;
+    margin: auto;
+    max-width: 600px;
+    padding: 0;
+}
+
+.Skills ul li {
+    text-align: left;
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+#other {
+    background-color: brown;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.other-profiles, .social-media-profiles {
+    background-color: aliceblue;
+    text-align: center;
+    padding: 10px;
+    border: 2px groove aqua;
+    flex: 1 1 45%;
+    max-width: 100%;
+}
+
+.other-profiles h2, .social-media-profiles h2 {
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+
+#contact {
+    padding: 20px;
+    margin: 10px auto;
+    text-align: center;
+    border: 1px solid #ff004f;
+    width: 90%;
+}
+
+.contact-id ul {
+    padding: 0;
+    list-style: none;
+}
+
+.contact-id ul li {
+    text-align: left;
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+#note {
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px groove #ff004f;
+    background-color: rgba(233, 254, 49, 0.784);
+    text-align: center;
+}
+
+/* Responsive Design for Smartphones */
+@media screen and (max-width: 1080px) {
+    header, nav, main, #Education, #Skills, #contact {
+        padding: 2%;
+    }
+
+    header h1, header h2 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul button {
+        margin: 5px 0;
+        padding: 10px;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+    #other {
+        flex-direction: column;
+    }
+
+    .other-profiles, .social-media-profiles {
+        flex: 1 1 100%;
+    }
 }
 
 /* Download Resume Button */
@@ -134,28 +261,4 @@ main {
     background-color: #272727; /* Lighter gray on hover */
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
     transform: translateY(-1px);
-}
-
-/* Responsive Design */
-@media screen and (max-width: 1080px) {
-    header, nav, main, #Education, #Skills, #contact, #about {
-        padding: 2%;
-    }
-
-    header h1, header h2 {
-        font-size: 1.5rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul button {
-        margin: 5px 0;
-        padding: 10px;
-    }
-
-    #about {
-        width: 95%;
-    }
 }
