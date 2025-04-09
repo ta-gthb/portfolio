@@ -197,7 +197,7 @@ tr:hover {
 }
 .other-profiles, .social-media-profiles {
     background-color: aliceblue;
-    padding: 60px;
+    padding: 40px;
     border: 2px groove aqua;
     flex: 1 1 45%;
     max-width: 100%;
