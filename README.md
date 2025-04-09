@@ -1,1 +1,1 @@
-# Resume
+This repository contains the necessary files created for a personal portfolio website. This is part of an internship offered by ShadowFox.
