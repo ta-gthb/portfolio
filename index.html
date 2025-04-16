@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanbir Ahmed | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Hello! I'm Tanbir Ahmed</h1>
+        <p>Computer Science Engineer<p>
+        <h2>Welcome to my Portfolio!!!</h2>
+        <a href="path/to/your-resume.pdf" download="Tanbir_Ahmed_Resume.pdf" class="download-btn">Download Resume</a>
+        <ul><button><a href="#Education">Academic Qualification</a></button>
+            <button><a href="#Skills">Skills</a></button>
+            <button><a href="#Projects">Projects</a></button>
+            <button><a href="#Experience">Experience</a></button>
+            <button><a href="#contact">Contact</a></button>
+        </ul>
+    </header>
+    <section class="animate-on-scroll"></section>
+<nav>
+    <h1>About Me</h1>
+            <p>Hello! I am an undergraduate engineering student currently pursuing <br> 
+                Bachelor of Technology in Computer Science and Engineering <br>
+                at Bengal Institute of Technology, Kolkata.</p>
+</nav>
+<main>
+    <div id="Education">
+        <h2>ACADEMIC QUALIFICATION</h2>
+    <div class="table-container">
+            <table>
+                <thead>
+                <tr>
+                    <th>Degrees</th>
+                    <th>Institute</th>
+                    <th>Pass out Year</th>
+                    <th>Grade</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Bachelor of Technology (B.Tech.) in Computer Science and Engineering (CSE)</td>
+                    <td>Bengal Institute of Technology, Kolkata (BIT Kolkata) affiliated to Maulana Abul Kalam Azad University of Technology, West Bengal (MAKAUT,WB)</td>
+                    <td>2028</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>10+2 (WBCHSE)</td>
+                    <td>Govt. Sponsored Multipurpose School (Boys') Taki House</td>
+                    <td>2024</td>
+                    <td>A+ (80%)</td>
+                </tr>
+                <tr>
+                    <td>10 (WBBSE)</td>
+                    <td>Govt. Sponsored Multipurpose School (Boys') Taki House</td>
+                    <td>2022</td>
+                    <td>AA (92.43%)</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="Skills">
+        <div class="Skills">
+            <h2>SKILLS</h2>
+            <ul>
+                <li>Front-End Development</li>
+                <li>DSA with JAVA</li>
+                <li>Cloud Computing</li>
+                <li>C, C++, JAVA, Python</li>
+                <li>HTML, CSS, JS</li>
+                <li>Bootstrap, React</li>
+                <li>Artificial Intelligence and Machine Learning</li>
+            </ul>
+        </div>
+    </div>
+    <div id="Experience">
+        <div class="Experience">
+            <h2>EXPERIENCE</h2>
+            <ul>
+                <li>Web Development Internship @ ShadowFox - (April 2025 - Present)</li>
+                <li>Microsoft AINSI AICTE Internship @ Edunet Foundation - (April 2025 - Present)</li>
+                <li>Internshala Student Partner (ISP) - (November 2024 - February 2025)</li>
+            </ul>
+        </div>
+    </div>
+    <div id="other">
+            <div class="other-profiles">
+                <h2>Coding & learning Profiles</h2>
+            <a href="https://www.cloudskillsboost.google/public_profiles/f4fe5383-7d58-459b-b0e3-52adb204e485"><img src="Gcloud img.jpg" alt="" width="24%"></a>
+       <a href="https://github.com/ta-gthb"><img src="GitHub Logo.jpg" alt="" width="20%"></a>
+       <a href="https://learn.microsoft.com/en-us/users/TanbirAhmed"><img src="MS Learn img.jpg" alt="" width="20%"></a>
+    </div>
+        <div class="social-media-profiles">
+            <h2>Social Media Profiles</h2>
+        <a href="https://www.linkedin.com/in/tanbir-ahmed-lnkdin?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="LinkedIn logo.jpg" alt="" width="20%"></a>
+            </div>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="contact-id">
+        <h2>Contact</h2>
+        <ul>
+            <li><h4>Email ID:</h4> engr.tanbir1@gmail.com</li>
+            <li><h4>Mobile No.</h4> 9477733863</li>
+        </ul>
+    </div>
+    </div>
+    <div id="note">
+        <marquee behavior="scroll" direction="left"><h4>Note:-</h4><h5> Skills and Projects sections will be updated time to time...</h5></marquee>
+    </div>
+</section>
+</main>
+</body>
+<script>
+    // Select all navigation buttons
+    const navButtons = document.querySelectorAll('nav button a');
+
+    // Add event listeners to buttons
+    navButtons.forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default behavior of anchor links
+            
+            const targetId = button.getAttribute('href').substring(1); // Get the target section id
+            const targetSection = document.getElementById(targetId);
+            
+            // Scroll to the target section
+            window.scrollTo({
+                top: targetSection.offsetTop - 20, // Optional offset (adjust as needed)
+                behavior: 'smooth' // Smooth scrolling
+            });
+        });
+    });
+</script>
+</html>
