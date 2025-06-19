@@ -28,6 +28,10 @@ header {
     margin-top: 0%;
     width: 11.55%;
     height: auto;
+    border-radius: 4%;
+    border-width: thick;
+    border-color: #000000;
+    border-style: solid;
   }  
 
 header p {
