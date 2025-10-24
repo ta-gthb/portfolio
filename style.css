@@ -1,0 +1,553 @@
+/* === GLOBAL SETTINGS === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at 20% 20%, #000000, #020303 60%, #08454c 100%);
+  color: #e0e0e0;
+  overflow-x: hidden;
+  perspective: 1000px;
+}
+
+/* === HEADER === */
+header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 10vh; /* full viewport height */
+  display: block; /* Changed from flex */
+  flex-direction: column;
+  justify-content: center; /* vertically center content if needed */
+  align-items: flex-start;
+  padding: 0.8rem 3rem;
+  padding-bottom: 6%;
+  z-index: 10; /* above canvas and particles */
+  backdrop-filter: blur(10px);
+  background: rgba(5, 5, 10, 0.5); /* semi-transparent for effect */
+  border-bottom: 3px solid rgba(0, 255, 255, 0.2);
+}
+
+/* === DEVELOPER ICONS TOP-RIGHT === */
+.dev-profiles {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows icons to wrap on smaller screens */
+}
+
+.dev-profiles a {
+  color: #00eaff;
+  font-size: 2.5rem; /* Increased icon size */
+  transition: all 0.3s ease;
+}
+
+.dev-profiles a:hover {
+  transform: translateY(-3px) scale(1.1);
+  text-shadow: 0 0 10px #00eaff;
+}
+
+#profiles .gdev {
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
+  border: 2px solid #00eaff;
+  transition: all 0.3s ease;
+  flex-wrap: wrap;
+  margin-top: 15%;
+}
+
+#profiles .gcloud {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border: 2px solid #00eaff;
+  transition: all 0.3s ease;
+  flex-wrap: wrap;
+  margin-top: 12%;
+}
+
+#profiles .mslearn {
+  border-radius: 0%;
+  width: 34px;
+  height: 34px;
+  object-fit: cover;
+  border: 2px solid #00eaff;
+  transition: all 0.3s ease;
+  flex-wrap: wrap;
+  margin-top: 20%;
+}
+
+#profiles .gdev:hover {
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 0 10px #00eaff;
+}
+
+#profiles .gcloud:hover {
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 0 10px #00eaff;
+}
+
+#profiles .mslearn:hover {
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 0 10px #00eaff;
+}
+
+/* === NAME TYPING EFFECT === */
+header h1 {
+  font-size: 2.5rem;
+  color: #00eaff;
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  50% { width: 25ch; }
+  100% { width: 0; }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #00eaff; }
+}
+
+/* === HEADER SUBTITLE AND WELCOME === */
+header .subtitle {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+header .welcome {
+  font-size: 2rem;
+  color: #00eaff;
+  margin-top: 5%;
+  margin-bottom: 0%;
+  font-weight: 1000;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.1em solid #00eaff;
+  width: 26ch; /* Match the character count of the sentence */
+  animation: typing 5s steps(100) infinite alternate, blink 0.15s step-end infinite;
+}
+
+header nav {
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding-top: 0.7%;
+  padding-bottom: 3%;
+  padding-left: 56%;
+  font-weight: 100;
+}
+
+header .nav-btn {
+  display: inline-block;
+  color: #ccc;
+  text-decoration: none;
+  border-radius: 10px;
+  border-color: #439edb;
+  border-style: solid;
+  border-width: 1.8px;
+  padding: 0.5rem 0.5rem;
+  transition: color 0.3s ease;
+  background-color: #000;
+}
+header .nav-btn:hover {
+  background: rgb(110, 192, 243);
+  box-shadow: 0 0 10px #98f5ff;
+  color: #000;
+  border-color: #00eaff;
+  border-width: 2px;
+}
+
+/* === SECTIONS === */
+section {
+  padding: 6rem 3rem 3rem 3rem;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-in-out;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00eaff;
+}
+
+#about {
+  padding-left: 1%;
+  padding-top: 2%;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-right: 1rem;
+  width: 100%;
+  border-collapse: collapse;
+  background: linear-gradient(135deg, rgba(4, 82, 82, 0.277), rgba(69, 193, 235, 0.397));
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
+}
+.download-btn {
+  position: absolute;
+  display: inline-block;
+  justify-content: flex-end;
+  padding: 0.4rem 0.5rem;
+  text-decoration: solid;
+  font-weight: 20;
+  font-size: smaller;
+  background: rgb(2, 3, 3);
+  border: 2px solid #00eaff;
+  border-radius: 20px;
+  color: #ffffff;
+  transition: 0.3s ease;
+  margin-top: 0.88%;
+  margin-bottom: 1rem;
+  margin-left: 46%;
+}
+
+.download-btn:hover {
+  background: rgba(0, 255, 255, 0.3);
+  box-shadow: 0 0 10px #00eaff;
+}
+
+/* === CARDS, TABLES & LISTS === */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 5rem 3rem;
+  margin-bottom: 0%;
+  padding-top: 10%;
+  padding-bottom: 6%;
+  flex-wrap: wrap; /* Allows cards to stack on smaller screens */
+}
+
+.card {
+  background: linear-gradient(135deg, rgb(2, 41, 41), rgba(0,0,20,0.6));
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(107, 243, 243, 0.868);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  padding: 2rem;
+  flex: 1; /* Allows cards to grow */
+  min-width: 300px; /* Prevents cards from getting too small */
+  max-width: 500px; /* Prevents cards from getting too large */
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(0,255,255,0.3);
+}
+
+.card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* === EDUCATION CARDS === */
+.education-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.education-card {
+  background-color: transparent;
+  width: 800px;
+  height: 150px;
+  perspective: 1000px; /* For 3D effect */
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+.education-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 0 20px rgba(46, 230, 230, 0.637);
+  border-radius: 16px;
+}
+
+.education-card:hover .education-card-inner, .education-card:focus .education-card-inner {
+  box-shadow: 0 0 25px rgb(99, 249, 249);
+}
+
+.education-card-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.education-card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(184, 184, 184, 0.378), rgba(0,0,20,0.6));
+  padding: 1rem;
+}
+
+.education-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(0,255,255,0.05), rgba(0,0,20,0.6));
+  padding: 1rem;
+  text-align: justify;
+  line-height: 1.4;
+}
+
+.education-card-back h4 {
+  list-style: none;
+  justify-content: flex-start;
+  text-align: start;
+  padding: 0.5rem 1rem;
+}
+
+.education-card-back {
+  transform: rotateY(180deg);
+}
+
+.education-card-back ul {
+  list-style: symbols();
+  padding: 0;
+}
+
+.table-container table {
+  width: 100%;
+  border-style: solid;
+  background: linear-gradient(135deg, rgba(0,255,255,0.05), rgba(0,0,20,0.6));
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(46, 230, 230, 0.637);
+  transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
+}
+
+.table-container table:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgb(99, 249, 249);
+}
+
+.table-container td {
+  padding: 1rem;
+  border-bottom: 2px solid #ababab;
+  border-right: 2px solid #acacac;
+  text-align: center;
+}
+
+.table-container th {
+  padding: 1rem;
+  border-bottom: 2px solid #b0b0b0;
+  border-right: 2px solid #b0b0b0;
+  background: linear-gradient(135deg, rgba(44, 187, 220, 0.378), rgba(0,0,20,0.6));
+  border-color: #989898;
+  border-collapse: collapse;
+}
+
+.table-container tr {
+  border-color: #00eaff;
+  border-collapse: collapse;
+}
+
+/* === SKILLS CARDS === */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.skill-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; /* For 3D effect */
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+.skill-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 0 20px rgba(46, 230, 230, 0.637);
+  border-radius: 16px;
+}
+
+.skill-card:hover .skill-card-inner, .skill-card:focus .skill-card-inner {
+  box-shadow: 0 0 25px rgb(99, 249, 249);
+}
+
+.skill-card-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.skill-card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(184, 184, 184, 0.378), rgba(0,0,20,0.6));
+  padding: 1rem;
+}
+
+.skill-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(0,255,255,0.05), rgba(0,0,20,0.6));
+  padding: 1rem;
+  text-align: justify;
+}
+
+.skill-card-back h4 {
+  list-style: none;
+  justify-content: flex-start;
+  text-align: start;
+  padding: 0.5rem 1rem;
+}
+
+.skill-card-back {
+  transform: rotateY(180deg);
+}
+
+.skill-card-back ul {
+  list-style: symbols();
+  padding: 0;
+}
+
+ul.experience-list li:hover {
+  transform: translateY(-6px) rotateX(5deg);
+  box-shadow: 0 0 15px rgba(39, 255, 255, 0.723);
+  animation-play-state: running; /* Pause animation on hover */
+  background-image: linear-gradient(135deg, rgba(105, 232, 232, 0.733), rgba(0,0,50,0.6)); /* Specific hover background */
+}
+
+@keyframes wavyGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+  50% { background-color: 100% 50%; }
+}
+
+/* === FLOATING GRID FLOOR === */
+.grid-floor {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 300px;
+  background: repeating-linear-gradient(
+    to right,
+    rgba(0, 255, 255, 0.08) 0 2px,
+    transparent 2px 40px
+  ),
+  repeating-linear-gradient(
+    to top,
+    rgba(0, 255, 255, 0.08) 0 2px,
+    transparent 2px 40px
+  );
+  transform: rotateX(60deg) translateY(80px);
+  transform-origin: bottom center;
+  animation: gridMove 12s linear infinite;
+  z-index: 0;
+}
+
+@keyframes gridMove {
+  from { background-position: 0 0; }
+  to { background-position: 0 80px; }
+}
+
+/* === PARTICLES BACKGROUND === */
+.particles-bg {
+  position: fixed; /* Changed from relative */
+  top: 0;
+  left: 0;
+  width: 100%; /* Changed from 1000% */
+  height: 100%; /* Changed from 1000% */
+  overflow: hidden;
+  z-index: 0;
+  background: linear-gradient(135deg, rgba(0,100,255,0.05), rgba(0,255,255,0.05));
+}
+
+/* === FOOTER === */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* removed bottom profile icons */
+}
+
+    /* Styles for screens smaller than 768px (e.g., tablets and smartphones) */
+    @media screen and (max-width: 768px) {
+        /* Adjust layout for smaller screens */
+        .container {
+            flex-direction: column; /* Example: Stack elements vertically */
+        }
+        h1 {
+            font-size: 1.5em; /* Example: Reduce heading size */
+        }
+    }
+
+    /* Styles for screens smaller than 480px (e.g., smartphones) */
+    @media screen and (max-width: 480px) {
+        /* Further adjustments for very small screens */
+        nav ul {
+            display: block; /* Example: Make navigation items stack */
+        }
+        nav li {
+            width: 100%;
+            text-align: center;
+        }
+    }
