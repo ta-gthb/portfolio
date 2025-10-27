@@ -137,6 +137,7 @@ header .welcome {
   overflow: hidden;
   border-right: 0.1em solid #00eaff;
   width: 26ch; /* Match the character count of the sentence */
+  max-width: 100%; /* Prevents overflow on any screen size */
   animation: typing 5s steps(100) infinite alternate, blink 0.15s step-end infinite;
 }
 
