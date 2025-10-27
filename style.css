@@ -234,8 +234,8 @@ section h2 {
 .card-container {
   display: flex;
   justify-content: center;
-  gap: 2rem; 
-  margin-top: 10%;
+  gap: 2rem;
+  margin-top: 4rem;
   padding: 0; /* Remove padding to prevent compounding with section padding */
   margin-bottom: 0%; 
   flex-wrap: wrap; /* Allows cards to stack on smaller screens */
@@ -509,7 +509,7 @@ footer {
   }
 
   .card-container {
-    padding: 2rem 1rem;
+    padding: 0 1rem;
   }
 
   .education-container, .skills-container {
