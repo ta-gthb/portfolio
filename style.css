@@ -225,6 +225,7 @@ section h2 {
   margin-right: 1rem;
   background: linear-gradient(135deg, rgba(4, 82, 82, 0.277), rgba(69, 193, 235, 0.397));
   border-radius: 16px;
+  box-sizing: border-box; /* Ensure padding is included in the element's total width */
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
   transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
@@ -234,10 +235,11 @@ section h2 {
 .card-container {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 2rem; 
   margin-top: 4rem;
-  padding: 0; /* Remove padding to prevent compounding with section padding */
-  margin-bottom: 0%; 
+  padding: 0 1rem; /* Use padding for horizontal spacing */
+  margin-left: 0;
+  margin-right: 0;
   flex-wrap: wrap; /* Allows cards to stack on smaller screens */
 }
 
@@ -509,7 +511,7 @@ footer {
   }
 
   .card-container {
-    padding: 0 1rem;
+    /* This rule is now handled by the main .card-container style */
   }
 
   .education-container, .skills-container {
@@ -524,7 +526,8 @@ footer {
 /* Mobile devices */
 @media (max-width: 768px) {
   body {
-    padding-left: 0;
+    padding-left: 0; /* Already present */
+    padding-right: 0; /* Add for consistency */
   }
 
   header {
@@ -556,7 +559,13 @@ footer {
   }
 
   section {
-    padding: 4rem 1rem 2rem 1rem;
+    padding: 4rem 1.5rem 2rem 1.5rem; /* Adjust horizontal padding for mobile */
+  }
+
+  #about {
+    margin-left: 0; /* Remove horizontal margins on mobile */
+    margin-right: 0;
+    padding: 2rem 1.5rem; /* Control spacing with padding */
   }
 
   .education-card, .skill-card {
