@@ -560,18 +560,18 @@ footer {
   }
 
   section {
-    padding: 4rem 1.5rem 2rem 1.5rem; /* Adjust horizontal padding for mobile */
+    padding: 4rem 1rem 2rem 1rem; /* Standardize horizontal padding for all sections on mobile */
   }
 
   #about {
     margin-left: 0; /* Remove horizontal margins on mobile */
     margin-right: 0;
-    padding: 2rem 1.5rem; /* Control spacing with padding */
+    padding: 2rem 1rem; /* Adjust padding to match general section padding */
   }
 
   .card {
     min-width: 0; /* Allow cards to shrink below 300px on mobile */
-    padding: 1.5rem 1rem; /* Reduce horizontal padding for cards on mobile */
+    padding: 1.5rem 0.5rem; /* Further reduce horizontal padding for individual cards */
   }
 
   .education-card, .skill-card {
