@@ -568,6 +568,10 @@ footer {
     padding: 2rem 1.5rem; /* Control spacing with padding */
   }
 
+  .card {
+    min-width: 0; /* Allow cards to shrink below 300px on mobile */
+  }
+
   .education-card, .skill-card {
     width: 100%;
     max-width: 350px;
