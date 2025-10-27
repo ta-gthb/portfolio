@@ -234,11 +234,10 @@ section h2 {
 .card-container {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  padding: 5rem 3rem;
-  margin-bottom: 0%;
-  padding-top: 10%;
-  padding-bottom: 6%;
+  gap: 2rem; 
+  margin-top: 10%;
+  padding: 0; /* Remove padding to prevent compounding with section padding */
+  margin-bottom: 0%; 
   flex-wrap: wrap; /* Allows cards to stack on smaller screens */
 }
 
