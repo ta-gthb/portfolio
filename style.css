@@ -17,7 +17,7 @@ header {
   position: relative;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   min-height: 10vh;
   display: flex;
   flex-direction: column; 
@@ -219,13 +219,10 @@ section h2 {
 }
 
 #about {
-  padding-left: 1%;
-  padding-top: 2%;
+  padding: 2rem;
   margin-top: 1rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
   margin-right: 1rem;
-  width: 100%;
-  border-collapse: collapse;
   background: linear-gradient(135deg, rgba(4, 82, 82, 0.277), rgba(69, 193, 235, 0.397));
   border-radius: 16px;
   overflow: hidden;
