@@ -570,11 +570,12 @@ footer {
 
   .card {
     min-width: 0; /* Allow cards to shrink below 300px on mobile */
+    padding: 1.5rem 1rem; /* Reduce horizontal padding for cards on mobile */
   }
 
   .education-card, .skill-card {
     width: 100%;
-    max-width: 350px;
+    max-width: 100%; /* Allow cards to shrink to fit the available width */
   }
 
   .table-container {
