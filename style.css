@@ -10,6 +10,7 @@ body {
   font-family: 'Inter', sans-serif;
   background: radial-gradient(circle at 20% 20%, #000000, #020303 60%, #08454c 100%);
   color: #e0e0e0;
+  overflow-x: hidden; /* Prevents all horizontal scrolling on the page */
 }
 
 /* === HEADER === */
@@ -60,7 +61,7 @@ header {
   border: 2px solid #00eaff;
   transition: all 0.3s ease;
   flex-wrap: wrap;
-  margin-top: 0.5rem;
+  margin-top: 0.4rem;
 }
 
 #profiles .gcloud {
@@ -71,7 +72,7 @@ header {
   border: 2px solid #00eaff;
   transition: all 0.3s ease;
   flex-wrap: wrap;
-  margin-top: 0.5rem;
+  margin-top: 0.3rem;
 }
 
 #profiles .mslearn {
@@ -232,18 +233,16 @@ section h2 {
   transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
 }
 
-/* === CARDS, TABLES & LISTS === */
-.card-container {
-  display: flex;
-  justify-content: center;
-  gap: 2rem; 
-  margin-top: 4rem;
-  padding: 0 1rem; /* Use padding for horizontal spacing */
-  margin-left: 0;
-  margin-right: 0;
-  flex-wrap: wrap; /* Allows cards to stack on smaller screens */
-}
+ .card-container {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically on mobile */
+    align-items: center; /* This will center the cards horizontally */
+    gap: 5rem;
+    padding-top: 0; /* Remove extra top padding as it's a section now */
+    margin-top: 10%;
+  }
 
+/* === CARDS, TABLES & LISTS === */
 .card {
   background: linear-gradient(135deg, rgb(2, 41, 41), rgba(0,0,20,0.6));
   border-radius: 16px;
@@ -251,7 +250,7 @@ section h2 {
   transition: transform 0.5s ease, box-shadow 0.5s ease;
   padding: 2rem;
   flex: 1; /* Allows cards to grow */
-  min-width: 300px; /* Prevents cards from getting too small */
+  min-width: 10px; /* Prevents cards from getting too small */
   max-width: 500px; /* Prevents cards from getting too large */
 }
 
@@ -511,10 +510,6 @@ footer {
     text-align: center;
   }
 
-  .card-container {
-    /* This rule is now handled by the main .card-container style */
-  }
-
   .education-container, .skills-container {
     gap: 2rem;
   }
@@ -532,17 +527,18 @@ footer {
   }
 
   header {
-    padding: 1rem;
-    padding-bottom: 2rem;
+    width: 100%; /* Use 100% instead of 100vw to account for scrollbar */
+    padding: 0 1rem 2rem 1rem; /* Apply consistent horizontal padding */
   }
 
   header nav {
-    gap: 0.5rem;
+    gap: 0.3rem; /* Reduce the gap between nav buttons */
     justify-content: center;
+    flex-wrap: wrap; /* Ensure buttons can wrap to the next line if needed */
   }
 
   header .nav-btn {
-    padding: 0.4rem 0.4rem;
+    padding: 0.3rem; /* Reduce padding inside the buttons */
     font-size: 0.8rem;
   }
 
@@ -560,7 +556,16 @@ footer {
   }
 
   section {
-    padding: 4rem 1rem 2rem 1rem; /* Standardize horizontal padding for all sections on mobile */
+    /* This is the key fix: Apply mobile-friendly padding to ALL sections */
+    padding: 4rem 1rem 2rem 1rem;
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically on mobile */
+    align-items: center; /* Center the cards horizontally */
+    gap: 5rem;
+    width: 100%; /* Ensure container doesn't shrink */
   }
 
   #about {
@@ -570,13 +575,20 @@ footer {
   }
 
   .card {
-    min-width: 0; /* Allow cards to shrink below 300px on mobile */
-    padding: 1.5rem 0.5rem; /* Further reduce horizontal padding for individual cards */
+    width: 90%; /* Set width to 90% of the container */
+    max-width: 450px; /* Optional: A max-width for larger mobile screens */
+  }
+
+  .card h2 {
+    text-align: center;
   }
 
   .education-card, .skill-card {
-    width: 100%;
-    max-width: 100%; /* Allow cards to shrink to fit the available width */
+    max-width: 350px; /* Allow cards to shrink to fit the available width */
+  }
+
+  .education-card-back {
+    font-size: 0.9rem; /* Slightly smaller text for better fit */
   }
 
   .table-container {
